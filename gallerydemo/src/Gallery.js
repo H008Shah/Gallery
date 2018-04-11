@@ -37,8 +37,7 @@ class Gallery extends Component {
     ({
 
       title: "Gallery",
-      // tabBarVisible:  (navigation.state.params && navigation.state.params.hideTabBar) == false,
-
+  
       headerStyle:
         {
           backgroundColor: "#0B4F9C",
@@ -59,19 +58,12 @@ class Gallery extends Component {
   getSelectedImages(images, current, ) {
     var num = images.length;
 
-
-    console.log("====Photo222===" + num);
     image_list.length = 0
 
-    // for(var i=0;i<images.length;i++)
-    // {
-    //   console.log("====Photo111==="+images[i].uri+"==num==="+num);
-
-    //   image_list.push({'uri':images[i].uri,'name':'photo'+i+'.jpg'})
-    // }
-    if (num > 0) {
-      console.log("====images===" + images[0].uri + "======" + JSON.stringify(images[0]) + "==current===" + JSON.stringify(current));
-
+   
+    if (num > 0) 
+    {
+  
       image_list = images[0].uri;
       navigate('ViewImage', { image_list })
     }
